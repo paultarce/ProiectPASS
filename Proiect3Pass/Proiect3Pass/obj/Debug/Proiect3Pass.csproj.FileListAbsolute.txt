@@ -1,0 +1,14 @@
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\bin\Debug\Proiect3Pass.exe.config
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\bin\Debug\Proiect3Pass.exe
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\bin\Debug\Proiect3Pass.pdb
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\bin\Debug\EntityFramework.dll
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\bin\Debug\EntityFramework.SqlServer.dll
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\bin\Debug\EntityFramework.xml
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\bin\Debug\EntityFramework.SqlServer.xml
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.csprojAssemblyReference.cache
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.Form1.resources
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.Properties.Resources.resources
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.csproj.GenerateResource.cache
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.csproj.CopyComplete
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.exe
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.pdb
