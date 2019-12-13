@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Studenti>
+	<Student>
+		<NrMatricol>1</NrMatricol>
+		<Nume>Paul</Nume>
+		<Media>8.8</Media>
+	</Student>	
+	<Student>
+		<NrMatricol>4643</NrMatricol>
+		<Nume>Ion</Nume>
+		<Media>8.8</Media>
+	</Student>	
+	<Student>
+		<NrMatricol>82345</NrMatricol>
+		<Nume>Andrei</Nume>
+		<Media>7</Media>
+	</Student>
+</Studenti>

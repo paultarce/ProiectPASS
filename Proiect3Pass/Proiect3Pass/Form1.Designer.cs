@@ -57,7 +57,7 @@
             this.NrMatricol,
             this.Nume,
             this.Medie});
-            this.dataGridView1.Location = new System.Drawing.Point(366, 44);
+            this.dataGridView1.Location = new System.Drawing.Point(393, 44);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(343, 272);
@@ -169,7 +169,7 @@
             // lblDataSource
             // 
             this.lblDataSource.AutoSize = true;
-            this.lblDataSource.Location = new System.Drawing.Point(499, 13);
+            this.lblDataSource.Location = new System.Drawing.Point(544, 9);
             this.lblDataSource.Name = "lblDataSource";
             this.lblDataSource.Size = new System.Drawing.Size(35, 13);
             this.lblDataSource.TabIndex = 10;
@@ -179,7 +179,7 @@
             // 
             this.btnZiBuna.Location = new System.Drawing.Point(259, 44);
             this.btnZiBuna.Name = "btnZiBuna";
-            this.btnZiBuna.Size = new System.Drawing.Size(84, 32);
+            this.btnZiBuna.Size = new System.Drawing.Size(98, 32);
             this.btnZiBuna.TabIndex = 11;
             this.btnZiBuna.Text = "Zi Buna?";
             this.btnZiBuna.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             // 
             this.btnMedieViitor.Location = new System.Drawing.Point(259, 94);
             this.btnMedieViitor.Name = "btnMedieViitor";
-            this.btnMedieViitor.Size = new System.Drawing.Size(84, 35);
+            this.btnMedieViitor.Size = new System.Drawing.Size(98, 35);
             this.btnMedieViitor.TabIndex = 12;
             this.btnMedieViitor.Text = "Medie Viitor...";
             this.btnMedieViitor.UseVisualStyleBackColor = true;

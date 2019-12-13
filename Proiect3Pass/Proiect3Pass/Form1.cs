@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proiect3Pass.AlgoritmiPreziceri;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,6 @@ namespace Proiect3Pass
     public partial class Form1 : Form
     {
 
-        List<Studenti> clientStudenti = new List<Studenti>();
-        DataSourceFactory dsFactory;
         IStudentRepository studentRepository;
 
         string DataSource;
@@ -33,9 +32,7 @@ namespace Proiect3Pass
 
         void Clear()
         {
-            studentRepository = DataSourceFactory.getDataSource(DataSource);
-            clientStudenti = studentRepository.GetAllStudents();
-
+           
             txtNrMatricol.Text = "0";
             txtMedia.Text = txtNume.Text = "";
             btnStergere.Enabled = false;
@@ -44,6 +41,14 @@ namespace Proiect3Pass
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            studentRepository = DataSourceFactory.getDataSource(DataSource);
+        
+            if(DataSource == "XML")
+            {
+                btnSalvare.Enabled = false;
+                btnStergere.Enabled = false;
+                btnAnulare.Enabled = false;
+            }
 
             Clear();
             PopulateDataGridView();
@@ -65,7 +70,7 @@ namespace Proiect3Pass
             {
                 studentRepository.ActualizeazaStudent(student);
             }
-           
+
             Clear();
             PopulateDataGridView();
             MessageBox.Show("Submitteed Successfully");
@@ -94,7 +99,7 @@ namespace Proiect3Pass
         Studenti selectedStudent;
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            
+
             if (dataGridView1.CurrentRow.Index != -1)
             {
                 selectedStudent = new Studenti() { NrMatricol = Convert.ToInt32(dataGridView1.CurrentRow.Cells["NrMatricol"].Value) };
@@ -123,9 +128,22 @@ namespace Proiect3Pass
 
         private void btnZiBuna_Click(object sender, EventArgs e)
         {
-            if(txtNrMatricol.Text != "")
+            if (txtNrMatricol.Text != "")
             {
+                Studenti stud = studentRepository.GetAllStudents().Where(s => s.NrMatricol == Convert.ToInt32(txtNrMatricol.Text)).FirstOrDefault();
+                if (stud != null)
+                {
+                    bool zibuna = PreziceriAlgo.PrezicereTipZi(stud);
 
+                    if (zibuna)
+                        MessageBox.Show("Studentul cu Nr: " + stud.NrMatricol + " VA AVEA O ZI BUNA");
+                    else
+                        MessageBox.Show("Studentul cu Nr: " + stud.NrMatricol + " NU VA AVEA O ZI BUNA");
+                }
+                else
+                {
+                    MessageBox.Show("Nu s-a gasit un student cu nr matricol " + txtNrMatricol.Text);
+                }
             }
         }
 
@@ -133,13 +151,49 @@ namespace Proiect3Pass
         {
             if (txtNrMatricol.Text != "")
             {
+                Studenti stud = studentRepository.GetAllStudents().Where(s => s.NrMatricol == Convert.ToInt32(txtNrMatricol.Text)).FirstOrDefault();
+                if (stud != null)
+                {
+                    bool mediaCreste = PreziceriAlgo.PrezicereMedie(stud);
 
+                    if (mediaCreste)
+                        MessageBox.Show("Media pentru studentul cu Nr: " + stud.NrMatricol + " VA CRESTE");
+                    else
+                        MessageBox.Show("Media pentru studentul cu Nr: " + stud.NrMatricol + " VA SCADEA");
+                }
+                else
+                {
+                    MessageBox.Show("Nu s-a gasit un student cu nr matricol " + txtNrMatricol.Text);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selectati un student din lista");
             }
         }
 
         private void btnPesteOpt_Click(object sender, EventArgs e)
         {
+            int nrStudenti = 0;
+            List<Studenti> studenti = studentRepository.GetAllStudents();
+            if (studenti.Count > 0)
+            {
+                foreach(Studenti student in studenti)
+                {
+                    if(student.Medie >= 8)
+                    {
+                        bool mediaCreste = PreziceriAlgo.PrezicereMedie(student);
+                        if (mediaCreste)
+                            nrStudenti++;
+                    }
+                }
 
+                MessageBox.Show("Din studentii cu media peste 8, " + nrStudenti + " vor avea media mai mare");
+            } 
+            else
+            {
+                MessageBox.Show("Nu exista studenti");
+            }
         }
     }
 }
