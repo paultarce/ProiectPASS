@@ -16,6 +16,6 @@ namespace Proiect3Pass
     {
         public int NrMatricol { get; set; }
         public string Nume { get; set; }
-        public Nullable<double> Medie { get; set; }
+        public double Medie { get; set; }
     }
 }

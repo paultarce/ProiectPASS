@@ -12,3 +12,4 @@ D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj
 D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.csproj.CopyComplete
 D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.exe
 D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.pdb
+D:\Cursuri\Master II\PASS\Proiect PASS\ProiectPASS\Proiect3Pass\Proiect3Pass\obj\Debug\Proiect3Pass.QuestionForm.resources

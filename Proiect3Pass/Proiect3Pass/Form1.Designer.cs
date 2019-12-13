@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NrMatricol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nume = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNrMatricol = new System.Windows.Forms.TextBox();
             this.txtNume = new System.Windows.Forms.TextBox();
             this.txtMedia = new System.Windows.Forms.TextBox();
@@ -38,9 +41,10 @@
             this.btnSalvare = new System.Windows.Forms.Button();
             this.btnStergere = new System.Windows.Forms.Button();
             this.btnAnulare = new System.Windows.Forms.Button();
-            this.NrMatricol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nume = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Medie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblDataSource = new System.Windows.Forms.Label();
+            this.btnZiBuna = new System.Windows.Forms.Button();
+            this.btnMedieViitor = new System.Windows.Forms.Button();
+            this.btnPesteOpt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +57,36 @@
             this.NrMatricol,
             this.Nume,
             this.Medie});
-            this.dataGridView1.Location = new System.Drawing.Point(329, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(366, 44);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(343, 272);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // NrMatricol
+            // 
+            this.NrMatricol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NrMatricol.DataPropertyName = "NrMatricol";
+            this.NrMatricol.HeaderText = "NrMatricol";
+            this.NrMatricol.Name = "NrMatricol";
+            this.NrMatricol.ReadOnly = true;
+            // 
+            // Nume
+            // 
+            this.Nume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nume.DataPropertyName = "Nume";
+            this.Nume.HeaderText = "Nume";
+            this.Nume.Name = "Nume";
+            this.Nume.ReadOnly = true;
+            // 
+            // Medie
+            // 
+            this.Medie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Medie.DataPropertyName = "Medie";
+            this.Medie.HeaderText = "Medie";
+            this.Medie.Name = "Medie";
+            this.Medie.ReadOnly = true;
             // 
             // txtNrMatricol
             // 
@@ -125,6 +154,7 @@
             this.btnStergere.TabIndex = 8;
             this.btnStergere.Text = "Stergere";
             this.btnStergere.UseVisualStyleBackColor = true;
+            this.btnStergere.Click += new System.EventHandler(this.btnStergere_Click);
             // 
             // btnAnulare
             // 
@@ -136,32 +166,54 @@
             this.btnAnulare.UseVisualStyleBackColor = true;
             this.btnAnulare.Click += new System.EventHandler(this.btnAnulare_Click);
             // 
-            // NrMatricol
+            // lblDataSource
             // 
-            this.NrMatricol.DataPropertyName = "NrMatricol";
-            this.NrMatricol.HeaderText = "NrMatricol";
-            this.NrMatricol.Name = "NrMatricol";
-            this.NrMatricol.ReadOnly = true;
+            this.lblDataSource.AutoSize = true;
+            this.lblDataSource.Location = new System.Drawing.Point(499, 13);
+            this.lblDataSource.Name = "lblDataSource";
+            this.lblDataSource.Size = new System.Drawing.Size(35, 13);
+            this.lblDataSource.TabIndex = 10;
+            this.lblDataSource.Text = "label4";
             // 
-            // Nume
+            // btnZiBuna
             // 
-            this.Nume.DataPropertyName = "Nume";
-            this.Nume.HeaderText = "Nume";
-            this.Nume.Name = "Nume";
-            this.Nume.ReadOnly = true;
+            this.btnZiBuna.Location = new System.Drawing.Point(259, 44);
+            this.btnZiBuna.Name = "btnZiBuna";
+            this.btnZiBuna.Size = new System.Drawing.Size(84, 32);
+            this.btnZiBuna.TabIndex = 11;
+            this.btnZiBuna.Text = "Zi Buna?";
+            this.btnZiBuna.UseVisualStyleBackColor = true;
+            this.btnZiBuna.Click += new System.EventHandler(this.btnZiBuna_Click);
             // 
-            // Medie
+            // btnMedieViitor
             // 
-            this.Medie.DataPropertyName = "Medie";
-            this.Medie.HeaderText = "Medie";
-            this.Medie.Name = "Medie";
-            this.Medie.ReadOnly = true;
+            this.btnMedieViitor.Location = new System.Drawing.Point(259, 94);
+            this.btnMedieViitor.Name = "btnMedieViitor";
+            this.btnMedieViitor.Size = new System.Drawing.Size(84, 35);
+            this.btnMedieViitor.TabIndex = 12;
+            this.btnMedieViitor.Text = "Medie Viitor...";
+            this.btnMedieViitor.UseVisualStyleBackColor = true;
+            this.btnMedieViitor.Click += new System.EventHandler(this.btnMedieViitor_Click);
+            // 
+            // btnPesteOpt
+            // 
+            this.btnPesteOpt.Location = new System.Drawing.Point(23, 264);
+            this.btnPesteOpt.Name = "btnPesteOpt";
+            this.btnPesteOpt.Size = new System.Drawing.Size(104, 41);
+            this.btnPesteOpt.TabIndex = 13;
+            this.btnPesteOpt.Text = "Cati Studenti vor avea media > 8";
+            this.btnPesteOpt.UseVisualStyleBackColor = true;
+            this.btnPesteOpt.Click += new System.EventHandler(this.btnPesteOpt_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(773, 381);
+            this.Controls.Add(this.btnPesteOpt);
+            this.Controls.Add(this.btnMedieViitor);
+            this.Controls.Add(this.btnZiBuna);
+            this.Controls.Add(this.lblDataSource);
             this.Controls.Add(this.btnAnulare);
             this.Controls.Add(this.btnStergere);
             this.Controls.Add(this.btnSalvare);
@@ -173,7 +225,8 @@
             this.Controls.Add(this.txtNrMatricol);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Aplicatie PASS";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -196,6 +249,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NrMatricol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nume;
         private System.Windows.Forms.DataGridViewTextBoxColumn Medie;
+        private System.Windows.Forms.Label lblDataSource;
+        private System.Windows.Forms.Button btnZiBuna;
+        private System.Windows.Forms.Button btnMedieViitor;
+        private System.Windows.Forms.Button btnPesteOpt;
     }
 }
 
