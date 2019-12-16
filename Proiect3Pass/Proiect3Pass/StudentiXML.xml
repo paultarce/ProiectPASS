@@ -2,16 +2,16 @@
 <Studenti>
 	<Student>
 		<NrMatricol>1</NrMatricol>
-		<Nume>Paul</Nume>
+		<Nume>Tarce</Nume>
+		<Media>8.9</Media>
+	</Student>	
+	<Student>
+		<NrMatricol>2</NrMatricol>
+		<Nume>Andreea</Nume>
 		<Media>8.8</Media>
 	</Student>	
 	<Student>
-		<NrMatricol>4643</NrMatricol>
-		<Nume>Ion</Nume>
-		<Media>8.8</Media>
-	</Student>	
-	<Student>
-		<NrMatricol>82345</NrMatricol>
+		<NrMatricol>5</NrMatricol>
 		<Nume>Andrei</Nume>
 		<Media>7</Media>
 	</Student>

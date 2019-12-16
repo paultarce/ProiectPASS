@@ -73,18 +73,14 @@ namespace Proiect3Pass
 
             Clear();
             PopulateDataGridView();
-            MessageBox.Show("Submitteed Successfully");
+            MessageBox.Show("Subscris cu succes");
 
         }
 
 
         void PopulateDataGridView() //get Studenti from Student Repo 
         {
-            /*dataGridView1.AutoGenerateColumns = false;
-            using (PassDBEntities db = new PassDBEntities())
-            {
-                dataGridView1.DataSource = db.Studenti.ToList<Studenti>();
-            }*/
+            
 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = studentRepository.GetAllStudents();
@@ -111,7 +107,11 @@ namespace Proiect3Pass
                 txtMedia.Text = selectedStudent.Medie.ToString();
 
                 btnSalvare.Text = "Actualizare";
-                btnStergere.Enabled = true;
+                if (DataSource == "SQL")
+                {
+                    btnStergere.Enabled = true;
+                }
+
             }
 
         }
@@ -123,7 +123,7 @@ namespace Proiect3Pass
             Clear();
             PopulateDataGridView();
 
-            MessageBox.Show("Deleted succesfully");
+            MessageBox.Show("Stergere Realizata");
         }
 
         private void btnZiBuna_Click(object sender, EventArgs e)
